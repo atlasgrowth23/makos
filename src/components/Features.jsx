@@ -70,7 +70,7 @@ const Features = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {features.map((feature, index) => {
             const Icon = feature.icon
             return (
@@ -81,11 +81,11 @@ const Features = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="feature-card text-center group"
               >
-                <div className={`w-16 h-16 ${feature.color} mx-auto mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
+                <div className={`w-12 h-12 sm:w-16 sm:h-16 ${feature.color} mx-auto mb-4 sm:mb-6 transform group-hover:scale-110 transition-transform duration-300`}>
                   <Icon className="w-full h-full" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">{feature.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{feature.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-3 sm:mb-4">{feature.title}</h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">{feature.description}</p>
               </motion.div>
             )
           })}

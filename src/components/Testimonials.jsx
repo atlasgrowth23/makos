@@ -48,29 +48,29 @@ const Testimonials = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white rounded-xl shadow-lg border border-gray-100 p-8 hover-lift"
+              className="bg-white rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6 lg:p-8 hover-lift"
             >
-              <div className="flex items-center mb-4">
+              <div className="flex items-center mb-3 sm:mb-4">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <StarIcon key={i} className="h-5 w-5 text-yellow-400" />
+                  <StarIcon key={i} className="h-4 w-4 sm:h-5 sm:w-5 text-yellow-400" />
                 ))}
               </div>
               
-              <blockquote className="text-gray-700 mb-6 leading-relaxed italic">
+              <blockquote className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6 leading-relaxed italic">
                 "{testimonial.text}"
               </blockquote>
               
-              <div className="border-t border-gray-100 pt-4">
-                <div className="font-bold text-gray-900">{testimonial.name}</div>
-                <div className="text-sm text-gray-600">{testimonial.location}</div>
-                <div className="text-sm text-primary-600 font-medium mt-1">{testimonial.service}</div>
+              <div className="border-t border-gray-100 pt-3 sm:pt-4">
+                <div className="text-sm sm:text-base font-bold text-gray-900">{testimonial.name}</div>
+                <div className="text-xs sm:text-sm text-gray-600">{testimonial.location}</div>
+                <div className="text-xs sm:text-sm text-blue-600 font-medium mt-1">{testimonial.service}</div>
               </div>
             </motion.div>
           ))}

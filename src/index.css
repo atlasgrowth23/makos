@@ -44,11 +44,11 @@
   }
   
   .service-card {
-    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover-lift;
+    @apply bg-white rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6 hover-lift;
   }
   
   .feature-card {
-    @apply bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg border border-gray-100 p-6 hover-lift;
+    @apply bg-gradient-to-br from-white to-gray-50 rounded-xl shadow-lg border border-gray-100 p-4 sm:p-6 hover-lift;
   }
 }
 

@@ -110,7 +110,7 @@ const Services = () => {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
         >
           {services.map((service, index) => {
             const Icon = service.icon
@@ -122,7 +122,7 @@ const Services = () => {
                 className="service-card group relative overflow-hidden"
               >
                 {/* Service Image */}
-                <div className="w-full h-48 mb-6 rounded-lg overflow-hidden">
+                <div className="w-full h-40 sm:h-48 mb-4 sm:mb-6 rounded-lg overflow-hidden">
                   <img 
                     src={service.image} 
                     alt={service.title}
@@ -130,18 +130,18 @@ const Services = () => {
                   />
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-700 transition-colors">
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-blue-700 transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 mb-3 sm:mb-4 leading-relaxed">
                   {service.description}
                 </p>
 
-                <ul className="space-y-2 mb-6">
+                <ul className="space-y-1 sm:space-y-2 mb-4 sm:mb-6">
                   {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-gray-700">
-                      <CheckCircleIcon className="h-4 w-4 text-blue-500 mr-2 flex-shrink-0" />
+                    <li key={idx} className="flex items-center text-xs sm:text-sm text-gray-700">
+                      <CheckCircleIcon className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500 mr-2 flex-shrink-0" />
                       {feature}
                     </li>
                   ))}
@@ -166,12 +166,12 @@ const Services = () => {
               Get expert solutions from Madison's most trusted plumbing professionals. 
               Contact us today for a free consultation and quote.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:6012916057" className="btn-emergency">
+            <div className="flex flex-col gap-4 justify-center max-w-md mx-auto">
+              <a href="tel:6012916057" className="btn-emergency w-full text-center min-h-[48px] flex items-center justify-center">
                 Call (601) 291-6057
               </a>
-              <Link to="/services">
-                <button className="btn-secondary">
+              <Link to="/services" className="w-full">
+                <button className="btn-secondary w-full min-h-[48px] flex items-center justify-center">
                   View All Services
                   <ArrowRightIcon className="h-5 w-5 ml-2" />
                 </button>

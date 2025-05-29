@@ -19,14 +19,14 @@ const Contact = () => {
             Contact us today for professional plumbing and gas services in Madison, Jackson, and surrounding areas.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="tel:6012916057" className="btn-emergency text-lg">
-              <PhoneIcon className="h-6 w-6 mr-2" />
+          <div className="flex flex-col gap-4 justify-center max-w-md mx-auto px-4">
+            <a href="tel:6012916057" className="btn-emergency text-base sm:text-lg w-full text-center min-h-[56px] flex items-center justify-center">
+              <PhoneIcon className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
               Call (601) 291-6057
             </a>
-            <Link to="/contact">
-              <button className="btn-secondary text-lg">
-                <ChatBubbleLeftRightIcon className="h-6 w-6 mr-2" />
+            <Link to="/contact" className="w-full">
+              <button className="btn-secondary text-base sm:text-lg w-full min-h-[56px] flex items-center justify-center">
+                <ChatBubbleLeftRightIcon className="h-5 w-5 sm:h-6 sm:w-6 mr-2" />
                 Request Quote
               </button>
             </Link>
