@@ -37,7 +37,7 @@ const Hero = () => {
   }
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center pt-20">
       {/* Background with professional plumbing image */}
       <div className="absolute inset-0">
         <img 
@@ -49,7 +49,7 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-8">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -141,14 +141,14 @@ const Hero = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1.5, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20"
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
+          transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
           className="flex flex-col items-center text-white/70"
         >
-          <span className="text-sm mb-2">Scroll to explore</span>
+          <span className="text-sm mb-2 hidden sm:block">Scroll to explore</span>
           <ChevronDownIcon className="h-6 w-6" />
         </motion.div>
       </motion.div>
