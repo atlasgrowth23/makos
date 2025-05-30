@@ -12,7 +12,7 @@ import {
 
 const Features = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const isInView = useInView(ref, { once: true, amount: 0.1, margin: "0px 0px -100px 0px" })
 
   const features = [
     {
@@ -54,7 +54,7 @@ const Features = () => {
   ]
 
   return (
-    <section ref={ref} className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section ref={ref} className="py-12 sm:py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

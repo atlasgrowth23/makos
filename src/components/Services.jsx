@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 
 const Services = () => {
   const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.3 })
+  const isInView = useInView(ref, { once: true, amount: 0.1, margin: "0px 0px -100px 0px" })
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -70,7 +70,7 @@ const Services = () => {
   ]
 
   return (
-    <section ref={ref} className="py-20 bg-white relative overflow-hidden">
+    <section ref={ref} className="py-12 sm:py-20 bg-white relative">
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white"></div>
       <div className="absolute top-0 left-0 w-full h-full bg-mesh opacity-20"></div>
